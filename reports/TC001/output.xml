@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-04-27T10:30:20.088915" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Cartpageverification" source="C:\Users\Dell\Downloads\GullyLabs\Gully_labs_robot_framework\Gully_labs_framework\gully_lab_robotframework\tests\integration\test_cartpageverification.robot">
+<kw name="Load Environment" owner="common_resources" type="SETUP">
+<kw name="Load Env" owner="env_loader">
+<arg>${ENV}</arg>
+<status status="PASS" start="2026-04-27T10:30:20.878600" elapsed="0.006809"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T10:30:20.886789" level="INFO">${base_url} = https://gullylabs.com/</msg>
+<var>${base_url}</var>
+<arg>baseurl</arg>
+<status status="PASS" start="2026-04-27T10:30:20.886105" elapsed="0.000864"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T10:30:20.888081" level="INFO">${login_email} = pratishthakumawat24@gmail.com</msg>
+<var>${login_email}</var>
+<arg>user_email</arg>
+<status status="PASS" start="2026-04-27T10:30:20.887517" elapsed="0.000706"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T10:30:20.889953" level="INFO">${login_password} = Pratishtha123</msg>
+<var>${login_password}</var>
+<arg>user_password</arg>
+<status status="PASS" start="2026-04-27T10:30:20.888905" elapsed="0.001185"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-04-27T10:30:20.892074" level="INFO">${BASE_URL} = https://gullylabs.com/</msg>
+<arg>${BASE_URL}</arg>
+<arg>${base_url}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-04-27T10:30:20.890695" elapsed="0.001576"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-04-27T10:30:20.893938" level="INFO">${LOGIN_EMAIL} = pratishthakumawat24@gmail.com</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${login_email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-04-27T10:30:20.892794" elapsed="0.001331"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-04-27T10:30:20.895709" level="INFO">${LOGIN_PASSWORD} = Pratishtha123</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${login_password}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-04-27T10:30:20.894588" elapsed="0.001311"/>
+</kw>
+<status status="PASS" start="2026-04-27T10:30:20.875631" elapsed="0.020562"/>
+</kw>
+<test id="s1-t1" name="TC005 Verify Product Added Reflects In Cart" line="16">
+<kw name="Open Application" owner="common_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:30:20.901385" level="INFO">Opening browser 'chrome' to base url 'https://gullylabs.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-27T10:30:20.900606" elapsed="8.349186"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-04-27T10:30:29.250436" elapsed="0.458809"/>
+</kw>
+<doc>Opens the browser and navigates to the application</doc>
+<status status="PASS" start="2026-04-27T10:30:20.899545" elapsed="8.810010"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-04-27T10:30:34.712035" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-04-27T10:30:29.710317" elapsed="5.002695"/>
+</kw>
+<kw name="Click Account Icon" owner="homepage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:30:34.718807" level="INFO">Clicking element 'xpath=(//shopify-account)[2]'.</msg>
+<arg>${ACCOUNT_ICON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:30:34.716953" elapsed="1.142034"/>
+</kw>
+<doc>Clicks the account icon to open account options</doc>
+<status status="PASS" start="2026-04-27T10:30:34.715191" elapsed="1.144061"/>
+</kw>
+<kw name="Log In To Gully Labs" owner="loginpage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-27T10:30:35.862486" level="INFO">Entering email address</msg>
+<arg>Entering email address</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-27T10:30:35.861688" elapsed="0.000948"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:30:35.863863" level="INFO">Typing text 'pratishthakumawat24@gmail.com' into text field 'id=CustomerEmail'.</msg>
+<msg time="2026-04-27T10:30:36.022750" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-04-27T10:30:36.023012" level="FAIL">Element with locator 'id=CustomerEmail' not found.</msg>
+<arg>${EMAIL_INPUT_FIELD}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-04-27T10:30:35.863038" elapsed="0.172385">Element with locator 'id=CustomerEmail' not found.</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Entering password</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.036267" elapsed="0.000160"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${PASSWORD_INPUT_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.037052" elapsed="0.000145"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>Clicking Sign In button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.037818" elapsed="0.000139"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.038583" elapsed="0.000142"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.039318" elapsed="0.000137"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.040027" elapsed="0.000191"/>
+</kw>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${LOGIN_PASSWORD}</arg>
+<doc>Logs the user into the application using provided credentials</doc>
+<status status="FAIL" start="2026-04-27T10:30:35.860707" elapsed="0.180153">Element with locator 'id=CustomerEmail' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.042775" elapsed="0.000143"/>
+</kw>
+<kw name="Search For Product" owner="searchpage">
+<arg>Gully Number 001 - Syaahi Blue</arg>
+<doc>Searches for a product by name on the Gully Labs site</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.043807" elapsed="0.000133"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.044687" elapsed="0.000125"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Syaahi Blue')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.045760" elapsed="0.000165"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.047051" elapsed="0.000197"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<var>${product_page_name}</var>
+<arg>return document.querySelector('section#xtitle') ? document.querySelector('section#xtitle').innerText.trim() : document.querySelector('h1').innerText.trim()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.048893" elapsed="0.000548"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${product_name_lower}</var>
+<arg>"${product_page_name}".lower()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.050434" elapsed="0.000159"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product on page: ${product_name_lower}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.051536" elapsed="0.000152"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//label[@data-entity-id="UK_8"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.052611" elapsed="0.000152"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.053665" elapsed="0.000154"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//span[text()='Add to cart']/parent::button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.054739" elapsed="0.000151"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[text()='Add to cart']/parent::button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.055809" elapsed="0.000153"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.056837" elapsed="0.000149"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=(//span[text()='Close']/parent::button)[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.058439" elapsed="0.000198"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.059657" elapsed="0.000153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//button[@data-entity-id='CART']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.060574" elapsed="0.000127"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.061495" elapsed="0.000130"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<var>${cart_item_name}</var>
+<arg>return document.querySelector('span.title a') ? document.querySelector('span.title a').innerText.trim() : ''</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.062426" elapsed="0.000118"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${cart_item_lower}</var>
+<arg>"${cart_item_name}".lower()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.063411" elapsed="0.000134"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Product in cart: ${cart_item_lower}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.064524" elapsed="0.000208"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<arg>${cart_item_name}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.065796" elapsed="0.000138"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${cart_item_lower}</arg>
+<arg>${product_name_lower}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2026-04-27T10:30:36.067335" elapsed="0.000209"/>
+</kw>
+<kw name="Close Application" owner="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-04-27T10:30:36.070241" elapsed="6.398012"/>
+</kw>
+<doc>Closes all open browsers</doc>
+<status status="PASS" start="2026-04-27T10:30:36.069142" elapsed="6.399550"/>
+</kw>
+<doc>TC005 - Integration test: verifies the product added to cart matches what was selected on the product page</doc>
+<tag>integration</tag>
+<status status="FAIL" start="2026-04-27T10:30:20.896458" elapsed="21.572957">Element with locator 'id=CustomerEmail' not found.</status>
+</test>
+<status status="FAIL" start="2026-04-27T10:30:20.091430" elapsed="22.381451"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">integration</stat>
+</tag>
+<suite>
+<stat name="Test Cartpageverification" id="s1" pass="0" fail="1" skip="0">Test Cartpageverification</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

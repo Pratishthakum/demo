@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-04-27T09:33:04.905578" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Loginpage" source="C:\Users\Dell\Downloads\GullyLabs\Gully_labs_robot_framework\Gully_labs_framework\gully_lab_robotframework\tests\functional\test_loginpage.robot">
+<kw name="Load Environment" owner="common_resources" type="SETUP">
+<kw name="Load Env" owner="env_loader">
+<arg>${ENV}</arg>
+<status status="PASS" start="2026-04-27T09:33:05.656444" elapsed="0.003769"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T09:33:05.660851" level="INFO">${base_url} = https://gullylabs.com/</msg>
+<var>${base_url}</var>
+<arg>baseurl</arg>
+<status status="PASS" start="2026-04-27T09:33:05.660530" elapsed="0.000392"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T09:33:05.661392" level="INFO">${login_email} = pratishthakumawat24@gmail.com</msg>
+<var>${login_email}</var>
+<arg>user_email</arg>
+<status status="PASS" start="2026-04-27T09:33:05.661147" elapsed="0.000303"/>
+</kw>
+<kw name="${login_password}= Get Env">
+<msg time="2026-04-27T09:33:05.664907" level="FAIL">No keyword with name '${login_password}= Get Env' found.</msg>
+<arg>user_password</arg>
+<status status="FAIL" start="2026-04-27T09:33:05.664798" elapsed="0.000208">No keyword with name '${login_password}= Get Env' found.</status>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${BASE_URL}</arg>
+<arg>${base_url}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2026-04-27T09:33:05.665278" elapsed="0.000058"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${login_email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2026-04-27T09:33:05.665532" elapsed="0.000051"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${login_password}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" start="2026-04-27T09:33:05.665763" elapsed="0.000048"/>
+</kw>
+<status status="FAIL" start="2026-04-27T09:33:05.653838" elapsed="0.012195">No keyword with name '${login_password}= Get Env' found.</status>
+</kw>
+<test id="s1-t1" name="TC001 Successful Login" line="11">
+<doc>TC001 - Verifies that a registered user can log in successfully</doc>
+<tag>functional</tag>
+<status status="FAIL" start="2026-04-27T09:33:05.666213" elapsed="0.000977">Parent suite setup failed:
+No keyword with name '${login_password}= Get Env' found.</status>
+</test>
+<status status="FAIL" start="2026-04-27T09:33:04.909526" elapsed="0.759463">Suite setup failed:
+No keyword with name '${login_password}= Get Env' found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">functional</stat>
+</tag>
+<suite>
+<stat name="Test Loginpage" id="s1" pass="0" fail="1" skip="0">Test Loginpage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-04-27T10:29:13.561869" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Nonexistingproduct" source="C:\Users\Dell\Downloads\GullyLabs\Gully_labs_robot_framework\Gully_labs_framework\gully_lab_robotframework\tests\negative\test_nonexistingproduct.robot">
+<kw name="Load Environment" owner="common_resources" type="SETUP">
+<kw name="Load Env" owner="env_loader">
+<arg>${ENV}</arg>
+<status status="PASS" start="2026-04-27T10:29:14.198638" elapsed="0.005374"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T10:29:14.205241" level="INFO">${base_url} = https://gullylabs.com/</msg>
+<var>${base_url}</var>
+<arg>baseurl</arg>
+<status status="PASS" start="2026-04-27T10:29:14.204606" elapsed="0.000793"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T10:29:14.206432" level="INFO">${login_email} = pratishthakumawat24@gmail.com</msg>
+<var>${login_email}</var>
+<arg>user_email</arg>
+<status status="PASS" start="2026-04-27T10:29:14.205880" elapsed="0.000686"/>
+</kw>
+<kw name="Get Env" owner="env_loader">
+<msg time="2026-04-27T10:29:14.207531" level="INFO">${login_password} = Pratishtha123</msg>
+<var>${login_password}</var>
+<arg>user_password</arg>
+<status status="PASS" start="2026-04-27T10:29:14.206996" elapsed="0.000658"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-04-27T10:29:14.209589" level="INFO">${BASE_URL} = https://gullylabs.com/</msg>
+<arg>${BASE_URL}</arg>
+<arg>${base_url}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-04-27T10:29:14.208134" elapsed="0.001673"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-04-27T10:29:14.212586" level="INFO">${LOGIN_EMAIL} = pratishthakumawat24@gmail.com</msg>
+<arg>${LOGIN_EMAIL}</arg>
+<arg>${login_email}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-04-27T10:29:14.210323" elapsed="0.002538"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-04-27T10:29:14.214777" level="INFO">${LOGIN_PASSWORD} = Pratishtha123</msg>
+<arg>${LOGIN_PASSWORD}</arg>
+<arg>${login_password}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-04-27T10:29:14.213489" elapsed="0.001492"/>
+</kw>
+<status status="PASS" start="2026-04-27T10:29:14.196177" elapsed="0.019138"/>
+</kw>
+<test id="s1-t1" name="TC008 Search Non-Existing Product" line="11">
+<kw name="Open Application" owner="common_resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:29:14.220271" level="INFO">Opening browser 'chrome' to base url 'https://gullylabs.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-27T10:29:14.219304" elapsed="9.916902"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-04-27T10:29:24.137063" elapsed="0.260234"/>
+</kw>
+<doc>Opens the browser and navigates to the application</doc>
+<status status="PASS" start="2026-04-27T10:29:14.217987" elapsed="10.180627"/>
+</kw>
+<kw name="Search For Product" owner="searchpage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:29:24.404419" level="INFO">Clicking element 'xpath=(//a[@href='/search'])[2]'.</msg>
+<arg>${SEARCH_ICON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:29:24.402966" elapsed="0.606681"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-04-27T10:29:27.012795" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-04-27T10:29:25.010705" elapsed="2.002245"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:29:27.013654" level="INFO">Typing text 'smartphone' into text field 'xpath=//input[@class='input search__input']'.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>${search_query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-27T10:29:27.013222" elapsed="0.135913"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:29:27.150093" level="INFO">Sending key(s) ('ENTER',) to xpath=//input[@class='input search__input'] element.</msg>
+<msg time="2026-04-27T10:29:27.620189" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-04-27T10:29:27.620724" level="INFO">Releasing special key ENTER.</msg>
+<arg>${SEARCH_INPUT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-04-27T10:29:27.149476" elapsed="2.795254"/>
+</kw>
+<arg>smartphone</arg>
+<doc>Searches for a product by name on the Gully Labs site</doc>
+<status status="PASS" start="2026-04-27T10:29:24.401319" elapsed="5.544077"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-04-27T10:29:30.085041" level="INFO">Current page contains text 'No results'.</msg>
+<arg>No results</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-04-27T10:29:29.946751" elapsed="0.138552"/>
+</kw>
+<kw name="Close Application" owner="common_resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-04-27T10:29:30.087559" elapsed="6.458309"/>
+</kw>
+<doc>Closes all open browsers</doc>
+<status status="PASS" start="2026-04-27T10:29:30.086664" elapsed="6.459629"/>
+</kw>
+<doc>TC008 - Verifies that searching for a non-existing product shows a no-results message</doc>
+<tag>negative</tag>
+<status status="PASS" start="2026-04-27T10:29:14.215610" elapsed="22.331411"/>
+</test>
+<status status="PASS" start="2026-04-27T10:29:13.565762" elapsed="22.984370"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">negative</stat>
+</tag>
+<suite>
+<stat name="Test Nonexistingproduct" id="s1" pass="1" fail="0" skip="0">Test Nonexistingproduct</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
